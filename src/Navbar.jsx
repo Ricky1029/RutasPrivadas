@@ -18,6 +18,32 @@ export const Navbar = () => {
 		});
 	};
 
+	const navHomero = e => {
+		e.preventDefault();
+
+		navigate('/homero',{
+			replace: true,
+			state: {
+				logged: true,
+			},
+		});
+
+		onResetForm();
+	};
+
+	const navEpico = e => {
+		e.preventDefault();
+
+		navigate('/epico',{
+			replace: true,
+			state: {
+				logged: true,
+			},
+		});
+
+		onResetForm();
+	};
+
 	return (
 		<>
 			<header>
@@ -31,6 +57,8 @@ export const Navbar = () => {
 						<button className='btn-logout' onClick={onLogout}>
 							Cerrar sesión
 						</button>
+						<a href="/homero" onClick={navHomero}>Hola</a>
+						<a href="/epico" onClick={navEpico}>Epico</a>
 					</div>
 				) : (
 					<nav>

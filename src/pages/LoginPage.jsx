@@ -26,33 +26,6 @@ export const LoginPage = () => {
 		onResetForm();
 	};
 
-	const onLogin2 = e => {
-		e.preventDefault();
-
-		navigate('/homero', {
-			replace: true,
-			state: {
-				logged: true,
-				name,
-			},
-		});
-
-		onResetForm();
-	};
-
-	const onLogin3 = e => {
-		e.preventDefault();
-
-		navigate('/epico', {
-			replace: true,
-			state: {
-				logged: true,
-				name,
-			},
-		});
-
-		onResetForm();
-	};
 
 	return (
 		<div className='wrapper'>
@@ -98,12 +71,8 @@ export const LoginPage = () => {
 				</div>
 
 				<button>Entrar</button>
-			</form>
-			<form onSubmit={onLogin2}>
-				<button>Entrar 2</button>
-			</form>
-			<form onSubmit={onLogin3}>
-				<button>Entrar 3</button>
+				<button>Homero</button>
+				<button>Epico</button>
 			</form>
 		</div>
 	);
